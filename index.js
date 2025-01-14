@@ -1,11 +1,11 @@
 import dotenv from "dotenv";
-dotenv.config();
 import express from "express";
+dotenv.config();
 const app = express();
 
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
-const cors = require("cors");
+import cors from "cors";
 app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
 
 // http://expressjs.com/en/starter/static-files.html
@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/views/index.html");
+  return res.sendFile(__dirname + "/views/index.html");
 });
 
 // Excercise route
@@ -27,7 +27,7 @@ app.get("/api/whoami", function (req, res) {
 });
 // your first API endpoint...
 app.get("/api/hello", function (req, res) {
-  res.json({ greeting: "hello from waleed bukhari" });
+  return res.json({ greeting: "hello from waleed bukhari" });
 });
 
 // listen for requests :)

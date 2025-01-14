@@ -20,11 +20,12 @@
     "url": "https://github.com/freeCodeCamp/freeCodeCamp/issues"
   },
   "homepage": "https://github.com/freeCodeCamp/boilerplate-project-headerparser#readme",
-  "author": "freeCodeCamp <team@freecodecamp.org>",
+  "author": "Waleed Bukhari",
   "keywords": [
     "freeCodeCamp",
     "node",
-    "express"
+    "express",
+    "request-header-parser-microservice"
   ],
   "license": "MIT"
 }
